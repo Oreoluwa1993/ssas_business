@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your SaaS Business</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-image: url('https://source.unsplash.com/random/1920x1080');
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 100px;
+    }
+    nav {
+      background-color: #f1f1f1;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+    }
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .cta-button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      display: inline-block;
+      margin: 10px 0;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Automate. Analyze. Accelerate.</h1>
+    <p>Empowering eCommerce Excellence</p>
+  </header>
+
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#demo">Free Demo</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="features">
+      <h2>Features</h2>
+      <p>Explore amazing features like Automated Inventory Forecasting, Real-time Cart Abandonment Analytics, and Integrated Marketing ROI Tracking.</p>
+    </section>
+  
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <p>We offer multiple pricing plans to suit your needs.</p>
+    </section>
+
+    <section id="demo">
+      <h2>Free Demo</h2>
+      <p>Experience the future of eCommerce analytics today. No credit card required.</p>
+      <a href="#" class="cta-button">Start Your Free Demo</a>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you have any questions, feel free to reach out to us.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>Copyright 2023. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+          event.preventDefault();
+          const targetId = this.getAttribute('href').substring(1);
+          const targetElement = document.getElementById(targetId);
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
