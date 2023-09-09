@@ -9,6 +9,10 @@
       padding: 0;
       font-family: Arial, sans-serif;
     }
+    h1 {
+        font-size: 50px;
+        text-transform: uppercase;
+    }
     header {
       background-image: url('https://source.unsplash.com/random/1920x1080');
       background-size: cover;
@@ -54,7 +58,8 @@
 <body>
 
   <header>
-    <h1>Automate. Analyze. Accelerate.</h1>
+    <h1> Athena </h1>
+    <h2>Automate. Accelerate. Analyse</h2>
     <p>Empowering eCommerce Excellence</p>
   </header>
 
@@ -69,7 +74,7 @@
   </nav>
 
   <div class="container">
-    <section id="features">
+    <section>
       <h2>Features</h2>
       <p>Explore amazing features like Automated Inventory Forecasting, Real-time Cart Abandonment Analytics, and Integrated Marketing ROI Tracking.</p>
     </section>
@@ -97,16 +102,20 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const navLinks = document.querySelectorAll('nav a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-          event.preventDefault();
-          const targetId = this.getAttribute('href').substring(1);
-          const targetElement = document.getElementById(targetId);
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        });
-      });
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(event) {
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+
+      if(targetElement) {  // Only prevent default if element is found on the current page
+        event.preventDefault();
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
     });
+  });
+});
+
   </script>
 
 </body>
